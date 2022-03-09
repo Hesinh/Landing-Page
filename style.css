@@ -13,11 +13,14 @@ body {
     height: 200px;
     color: white;
     background-color: #1f2937 ;
-    justify-content: center;
+    justify-content: space-between;
 }
 .title {
     font-weight: bold;
-    font-size: 48px;
+    font-size: 22px;
+    padding: 15px;
+    margin: 15px;
+    
 }
 
 .footer {
@@ -30,7 +33,6 @@ a {
 ul {
     list-style: none;
     display: flex;
-    margin-left: 900px;
     gap: 15px;
     
 }
