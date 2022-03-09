@@ -12,7 +12,7 @@ body {
     display: flex;
     color: white;
     background-color: #1f2937 ;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 15px;
 }
 .title {
