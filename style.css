@@ -8,6 +8,7 @@
     height: 100px;
     color: white;
     background-color: #1f2937 ;
+    justify-content: center;
 }
 
 .footer {
@@ -20,5 +21,7 @@ a {
 ul {
     list-style: none;
     display: flex;
+    margin-left: 900px;
+    gap: 15px;
     
 }
