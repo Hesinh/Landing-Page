@@ -34,9 +34,6 @@ body {
     padding: 2em;
 }
 
-.footer {
-
-}
 a {
     text-decoration: none;
     color: white;
@@ -84,4 +81,12 @@ img {
 .button {
     margin-top: auto;
     margin-bottom: auto;
+}
+.footer {
+    display: flex;
+    color: white;
+    background-color: #1f2937;
+    padding: 15px;
+    justify-content: center;
+    margin-top: auto;
 }
