@@ -75,9 +75,11 @@ img {
     border-radius: 15px;
 }
 .container3 {
-    font-size: xxx-large;
-    font-family: cursive;
-    background-color: rgb(175, 175, 175);
+    font-size: 27px ;
+    font-style: italic;
+    color: #1f2937;
+    background-color: #E5E7EB;
+    padding: 100px;
 }
 .container4 {
     display: flex;
@@ -102,4 +104,8 @@ img {
     padding: 15px;
     justify-content: center;
     margin-top: auto;
+}
+p.quota {
+    font-size: smaller;
+    font-weight: bold;
 }
