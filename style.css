@@ -17,15 +17,10 @@ body {
 }
 .header2 {
     display: flex;
-    color: aquamarine; 
-    background-color: rgb(75, 42, 224) ;
     justify-content: center;
 }
-.title {
-    font-weight: bold;
-    font-size: 25px;
-    
-}
+
+
 .container1 {
     display: flex;
     color: white;
@@ -38,13 +33,19 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-size: x-large;
+    font-size: large;
     font-family: 'Times New Roman', Times, serif;
 }
 
 a {
     text-decoration: none;
     color: white;
+}
+p.title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+
 }
 ul {
     list-style: none;
@@ -61,10 +62,12 @@ button {
 }
 .container2 {
     display: flex;
-    background-color: rgb(75, 42, 224);
-    color: aqua;
     justify-content: space-evenly;
     padding: 2em;
+}
+.galery {
+    height: 330px;
+    width: 300px;
 }
 img {
     border:5px solid  rgb(81, 100, 202);
