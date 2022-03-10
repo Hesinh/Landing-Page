@@ -13,6 +13,7 @@ body {
     color: white;
     background-color: #1f2937 ;
     justify-content: space-around;
+    align-items: center;
     padding: 15px;
 }
 .header2 {
