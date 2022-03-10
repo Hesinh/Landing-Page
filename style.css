@@ -23,8 +23,9 @@ body {
 .container1 {
     display: flex;
     color: white;
-    background-color: #1f2937 ;
+    background-color: #283f60 ;
     justify-content: space-around;
+    padding: 2em;
 }
 
 .footer {
