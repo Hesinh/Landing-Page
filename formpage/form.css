@@ -1,0 +1,62 @@
+html{
+  background-color: #283f60;
+  color: white;
+  padding: 0;
+}
+.form-container{
+  display: flex;
+  box-sizing: content-box;
+  width: max-content;
+  height: 240px;
+  background-color: #283f60;
+}
+.form-style{
+  width: 28em;
+  position: relative;
+}
+.head{
+  color: black;
+  font-size: large;
+}
+
+.form-img > img{
+  width: 27em;
+  height: 44em;
+  margin-right: 20px;
+}
+input,label{
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+input {
+  border: 2px solid rgb(12, 233, 97);
+}
+input:focus{
+  border: 2px solid rgb(10, 175, 230);
+}
+input,
+textarea,
+select,
+button{
+  width: 150px;
+  padding: 0;
+  box-sizing: border-box;
+}
+input[type=submit]{
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* This is for testing the confirm */
+#cpsw.valid {
+  color: green;
+}
+#cpsw.invalid {
+  color: red;
+}
+.valid{
+  color:green;
+}
+.invalid{
+  color: red;
+}
