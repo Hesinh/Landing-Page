@@ -5,14 +5,12 @@ html{
 }
 .form-container{
   display: flex;
-  box-sizing: content-box;
-  width: max-content;
-  height: 240px;
+  width: 100%;
   background-color: #283f60;
 }
 .form-style{
-  width: 28em;
-  position: relative;
+  width: 20em;
+  max-width: 50%;
 }
 .head{
   color: black;
@@ -20,8 +18,13 @@ html{
 }
 
 .form-img > img{
-  width: 27em;
-  height: 44em;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: max-content;
+}
+.form-img{
+  width: 22em;
   margin-right: 20px;
 }
 input,label{
