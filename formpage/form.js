@@ -69,3 +69,55 @@ myInput.onkeyup = function() {
 //     letter.classList.add("valid");
 //   };
 // }
+//
+//#The next section have the custom validate
+// let firstname = document.getElementById("firstname");
+
+// firstname.addEventListener("input", (event) =>{ 
+//   if (firstname.validity.tooShort){
+//     firstname.setCustomValidity("Min char: 3, Max 15, Number allowed");
+//   }else{
+//     firstname.setCustomValidity("");
+//   }
+// });
+
+// let email = document.getElementById("mail")
+
+// email.addEventListener("input", (event) => {
+//   if (email.validity.typeMismatch){
+//     email.setCustomValidity("This field is required")
+//   }else{
+//     email.setCustomValidity("")
+//   }
+// });
+
+let form = document.querySelector("form");
+let email = document.getElementById("mail");
+let emailError = document.querySelector("#mail + span.error");
+
+email.addEventListener("input", (event) => {
+  if (email.validity.valid){
+    emailError.textContent = "";
+    emailError.className = "error";
+  } else {
+    showError();
+  }
+});
+
+form.addEventListener("submit", (event) => {
+  if (!email.validity.valid) {
+    showError();
+    event.preventDefault;
+  }
+});
+
+function showError() {
+  if (email.validity.valueMissing) {
+    emailError.textContent = "You need to enter an email address";
+  }else if (email.validity.typeMismatch) {
+    emailError.textContent = "Entered value needs to be an email address";
+  }else if (email.validity.tooShort) {
+    emailError.textContent = `Email should be at least ${email.minLength} chraracters, you entered ${email.value.length}`;
+  }
+  emailError.className = "error active";
+};

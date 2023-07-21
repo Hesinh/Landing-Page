@@ -11,29 +11,32 @@
 <body>
   <div class="form-container">
     <div class="form-img"><img src="images/Disgaea4Banner-1280x640.jpg" alt="test"></div>
-    <form action="xxx.x" method="get" class="form-style">
+    <form novalidate class="form-style"> 
+      <!-- action="xxx.x" method="get"  -->
       <div class="head">
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non augue quis mi pharetra luctus non in turpis. Donec scelerisque eget mauris et euismod.</h2>
         <h3>Fill this formulary!</h3>
       </div>
-      <div style="float:left;margin-right:20px;">
+      <!-- <div style="float:left;margin-right:20px;"> -->
        <label for="firstname">First Name:</label>
-       <input type="text" id="firstname" class="firstname">
-       </div>
-       <div style="float: left;">
+       <input type="text" id="firstname" class="firstname" minlength="3" maxlength="15" required>
+       <span class="error" aria-live="polite"></span>
+      <!-- </div> -->
+       <!-- <div style="float: left;"> -->
        <label for="lastname">Last Name:</label>
-       <input type="text" id="lastname" class="lastname">
-      </div>
-      <div style="float:left;margin-right: 20px;">
+       <input type="text" id="lastname" class="lastname" required>
+      <!-- </div> -->
+      <!-- <div style="float:left;margin-right: 20px;"> -->
         <label for="mail">Email</label>
-        <input type="email" id="mail" class="mail">
-      </div>
-       <div style="float: left;">
+        <input type="email" id="mail" class="mail" minlength="5" required>
+        <span class="error" aria-live="polite">Example xxx@mail.com</span>
+      <!-- </div> -->
+       <!-- <div style="float: left;"> -->
         <label for="phone">Phone</label>
        <input type="number" id="phone" class="phone">
-      </div>
-        <div style="float:left;">
-          <label for="password">Password:</label>
+      <!-- </div> -->
+        <!-- <div style="float:left;"> -->
+          <label for="psw">Password:</label>
           <input type="password" id="psw" class="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
           title="Must contain at least one number and one uppercase and lowercase, and at least 8 characters length">
           <h3>Password must contain the following:</h3>
@@ -45,12 +48,15 @@
          </div>
         <label for="cpsw">Confirm Password:</label>
         <input type="password" id="cpsw" class="invalid" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-      </div>
+      <!-- </div> -->
       <div>
-      <input type="submit" value="Create account">
- 
-      <p>Already have account? <a href="">Log In</a></p>
+        <button>Submit</button>
+      <div class="footer">
+        
+        <p>Already have account? <a href="">Log In</a></p>
       </div>
+
+    </div>
     </form>
   </div>
   <script src="form.js"></script>

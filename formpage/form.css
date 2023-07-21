@@ -1,20 +1,25 @@
 html{
-  background-color: #283f60;
+  --main-bg-color: #283f60;
+  --sub-color: #365d92;
+  background-color: var(--main-bg-color);
   color: white;
   padding: 0;
 }
 .form-container{
   display: flex;
   width: 100%;
-  background-color: #283f60;
+  background-color: var(--main-bg-color);
 }
 .form-style{
-  width: 20em;
-  max-width: 50%;
+  padding: 10px;
+  background-color: var(--main-bg-color);
 }
 .head{
-  color: black;
-  font-size: large;
+  color: #ec9d43;
+  background-color: var(--sub-color);
+}
+.footer{
+  background-color: var(--sub-color);
 }
 
 .form-img > img{
@@ -23,14 +28,13 @@ html{
   max-width: 100%;
   max-height: max-content;
 }
-.form-img{
-  width: 22em;
-  margin-right: 20px;
-}
+
 input,label{
   display: flex;
   flex-direction: column;
   margin-top: 10px;
+  font: -webkit-control;
+  color: #a4c4d2;
 }
 input {
   border: 2px solid rgb(12, 233, 97);
@@ -62,4 +66,12 @@ input[type=submit]{
 }
 .invalid{
   color: red;
+}
+/* This is for novalidate */
+.error {
+  width: 100%;
+  font-size: 80%;
+  color: white;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
 }
