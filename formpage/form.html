@@ -13,10 +13,10 @@
     <div class="form-img"><img src="images/Disgaea4Banner-1280x640.jpg" alt="test"></div>
     <form novalidate class="form-style"> 
       <!-- action="xxx.x" method="get"  -->
-      <div class="head">
+      <header>
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non augue quis mi pharetra luctus non in turpis. Donec scelerisque eget mauris et euismod.</h2>
         <h3>Fill this formulary!</h3>
-      </div>
+      </header>
       <!-- <div style="float:left;margin-right:20px;"> -->
        <label for="firstname">First Name:</label>
        <input type="text" id="firstname" class="firstname" minlength="3" maxlength="15" required>
@@ -49,12 +49,13 @@
         <label for="cpsw">Confirm Password:</label>
         <input type="password" id="cpsw" class="invalid" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
       <!-- </div> -->
+      <input type="submit" value="submit" formnovalidate="formnovalidate">
       <div>
-        <button>Submit</button>
-      <div class="footer">
-        
+      <footer>
         <p>Already have account? <a href="">Log In</a></p>
-      </div>
+        <span></span>
+        <p class="copyright">Copyright 2023 All rights reserved</p>
+      </footer>
 
     </div>
     </form>

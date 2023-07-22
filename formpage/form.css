@@ -1,25 +1,34 @@
-html{
+:root{
   --main-bg-color: #283f60;
-  --sub-color: #365d92;
+  --sub-color: #0a1f3a;
+  --header-form-color: #f1a90b;
+  --label-color: #a4c4d2;
+}
+
+html{
+  display: flexbox;
   background-color: var(--main-bg-color);
-  color: white;
-  padding: 0;
 }
 .form-container{
   display: flex;
-  width: 100%;
   background-color: var(--main-bg-color);
 }
 .form-style{
-  padding: 10px;
   background-color: var(--main-bg-color);
 }
-.head{
-  color: #ec9d43;
+header{
+  color: var(--header-form-color);
   background-color: var(--sub-color);
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.footer{
+footer{
   background-color: var(--sub-color);
+  color: white;
+}
+
+.copyright{
+  text-align: center;
 }
 
 .form-img > img{
@@ -28,13 +37,17 @@ html{
   max-width: 100%;
   max-height: max-content;
 }
+label {
+  color: var(--label-color);
+}
 
 input,label{
   display: flex;
   flex-direction: column;
   margin-top: 10px;
   font: -webkit-control;
-  color: #a4c4d2;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 input {
   border: 2px solid rgb(12, 233, 97);
