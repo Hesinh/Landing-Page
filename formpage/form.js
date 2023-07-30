@@ -7,23 +7,15 @@ let length = document.getElementById("length")
 //the next section is for programming confirm
 confInput.onkeyup = function() {
   if (myInput.value === confInput.value){
-    confInput.classList.remove("invalid");
-    confInput.classList.add("valid");
+    confInput.classList.remove("invalid-input");
+    confInput.classList.add("valid-input");
   }else{
-    confInput.classList.remove("valid");
-    confInput.classList.add("invalid");
+    confInput.classList.remove("valid-input");
+    confInput.classList.add("invalid-input");
   }
 };
 
 //the next section it was provided to WSC
-
-// myInput.onfocus = function () {
-//   document.getElementById("message").style.display = "block";
-// };
-
-// myInput.onblur = function () {
-//   document.getElementById("message").style.display = "none";
-// };
 
 myInput.onkeyup = function() {
   let lowerCaseLetters = /[a-z]/g;
@@ -95,17 +87,85 @@ let form = document.querySelector("form");
 let email = document.getElementById("mail");
 let emailError = document.querySelector("#mail + span.error");
 
+let firstname = document.getElementById("firstname")
+let firstnameError = document.querySelector("#firstname + span.required");
+
+let lastname = document.getElementById("lastname");
+let lastnameError = document.querySelector("#lastname + span.required");
+let phone = document.getElementById('phone');
+
+firstname.addEventListener("input", (event) => {
+  if (firstname.validity.valid){
+    firstnameError.textContent = "Valid name"
+    firstname.classList.remove('invalid-input');
+    firstname.classList.add('valid-input');
+  }else{
+    // showError();
+    firstname.classList.remove('valid-input');
+    firstname.classList.add('invalid-input');
+  }
+});
+
+lastname.addEventListener("input", (event) =>{
+  if (lastname.validity.valid){
+    lastnameError.textContent = "Valid name"
+    lastname.classList.remove('invalid-input');
+    lastname.classList.add('valid-input');
+  }else{
+    // showError();
+    lastname.classList.remove('valid-input');
+    lastname.classList.add('invalid-input');
+  }
+});
+
 email.addEventListener("input", (event) => {
   if (email.validity.valid){
-    emailError.textContent = "";
+    emailError.textContent = "Valid email";
     emailError.className = "error";
+    email.classList.remove("invalid-input");
+    email.classList.add("valid-input");
   } else {
-    showError();
+    email.classList.remove("valid-input");
+    email.classList.add("invalid-input");
+    // showError();
   }
+});
+
+phone.addEventListener("input", (event) => {
+  if (phone.validity.valid) {
+    phone.classList.remove("invalid-input");
+    phone.classList.add("valid-input");
+  }else{
+    showError()
+  }
+});
+
+myInput.addEventListener("input", (event) =>{
+  if (myInput.validity.valid) {
+    myInput.classList.remove('invalid-input');
+    myInput.classList.add('valid-input');
+  }else{
+    myInput.classList.remove('valid-input');
+    myInput.classList.add('invalid-input');
+  };
+
+  if (myInput.value === confInput.value){
+    confInput.classList.remove("invalid-input");
+    confInput.classList.add("valid-input");
+  }else{
+    confInput.classList.remove("valid-input");
+    confInput.classList.add("invalid-input");
+  };
 });
 
 form.addEventListener("submit", (event) => {
   if (!email.validity.valid) {
+    showError();
+    event.preventDefault();
+  }else if (!firstname.validity.valid){
+    showError();
+    event.preventDefault();
+  }else if(!lastname.validity.valid){
     showError();
     event.preventDefault();
   }
@@ -114,10 +174,37 @@ form.addEventListener("submit", (event) => {
 function showError() {
   if (email.validity.valueMissing) {
     emailError.textContent = "You need to enter an email address";
+    email.classList.remove('valid-input');
+    email.classList.add('invalid-input');
   }else if (email.validity.typeMismatch) {
     emailError.textContent = "Entered value needs to be an email address";
   }else if (email.validity.tooShort) {
     emailError.textContent = `Email should be at least ${email.minLength} chraracters, you entered ${email.value.length}`;
   }
-  emailError.className = "error active";
+  if (firstname.validity.valueMissing){
+    firstname.classList.remove('valid-input');
+    firstname.classList.add('invalid-input');
+    firstnameError.textContent = 'Enter a valid name';
+  };
+
+  if (lastname.validity.valueMissing){
+    lastname.classList.remove('valid-input');
+    lastname.classList.add('invalid-input');
+    lastnameError.textContent = 'Enter a valid name';
+  };
+
+  if (phone.validity.valueMissing) {
+    phone.classList.remove('valid-input');
+    phone.classList.add('invalid-input');
+  };
+
+  if (myInput.validity.valueMissing) {
+    myInput.classList.remove('valid-input');
+    myInput.classList.add('invalid-input');
+  };
+
+  if (confInput.validity.valueMissing) {
+    confInput.classList.remove('valid-input');
+    confInput.classList.add('invalid-input');
+  };
 };

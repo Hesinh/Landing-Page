@@ -19,25 +19,33 @@
       </header>
       <div class="label-box">
         <label for="firstname">First Name:</label>
-        <input type="text" id="firstname" class="firstname" minlength="3" maxlength="15" required>
+        <input type="text" id="firstname" class="valid-input" minlength="3" maxlength="15" required>
+        <span class="required">Enter a valid name</span>
       </div>
       <div class="label-box">
         <label for="lastname">Last Name:</label>
-        <input type="text" id="lastname" class="lastname" required>
+        <input type="text" id="lastname" class="valid-input" required>
+        <span class="required">Enter a valid name</span>
       </div>
       <div class="label-box">
         <label for="mail">Email Address:</label>
-        <input type="email" id="mail" class="mail" minlength="5" required>
+        <input type="email" id="mail" class="valid-input" minlength="5" required>
         <span class="error" aria-live="polite">Example xxx@mail.com</span>
       </div>
       <div class="label-box">
         <label for="phone">Phone Number:</label>
-        <input type="number" id="phone" class="phone">
+        <input type="number" id="phone" class="valid-input" required>
       </div>
       <div class="label-box">
         <label for="psw">Password:</label>
-        <input type="password" id="psw" class="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+        <input type="password" id="psw" class="valid-input" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
         title="Must contain at least one number and one uppercase and lowercase, and at least 8 characters length">
+      </div>
+      <div class="label-box">
+        <label for="cpsw">Confirm Password:</label>
+        <input type="password" id="cpsw" class="valid-input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+      </div>
+      <div class="full-width">
         <h3>Password must contain the following:</h3>
         <div id="message">
           <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
@@ -45,10 +53,6 @@
           <p id="number" class="invalid">A <b>number</b></p>
           <p id="length" class="invalid">Minimum <b>8 characters</b></p>
         </div>
-      </div>
-      <div class="label-box">
-        <label for="cpsw">Confirm Password:</label>
-        <input type="password" id="cpsw" class="invalid" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
       </div>
       <div class="label-box">
         <input type="submit" value="submit" formnovalidate="formnovalidate">

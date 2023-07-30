@@ -70,34 +70,31 @@ input,label{
 input {
   border: 2px solid rgb(12, 233, 97);
 }
-input:focus{
-  border: 2px solid rgb(10, 175, 230);
-}
-/* input,
-textarea,
-select,
-button{
-  width: 150px;
-  padding: 0;
-  box-sizing: border-box;
-} */
+
 input[type=submit]{
+  background-color: gray;
+  color: white;
+  border: none;
+  width: 80px;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* This is for testing the confirm */
-#cpsw.valid {
-  color: green;
-}
-#cpsw.invalid {
-  color: red;
-}
 .valid{
   color:green;
 }
 .invalid{
   color: red;
 }
+
+/* testing mail programming */
+.valid-input{
+  border: 2px solid #18ebda;
+}
+.invalid-input{
+  border: 2px solid red;
+}
+
 /* This is for novalidate */
 .error {
   width: 100%;
@@ -105,4 +102,8 @@ input[type=submit]{
   color: white;
   border-radius: 0 0 5px 5px;
   box-sizing: border-box;
+}
+.required {
+  color: white;
+  font-size: 80%;
 }
